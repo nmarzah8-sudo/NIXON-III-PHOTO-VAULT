@@ -6,5 +6,5 @@ import { setupAuthentication } from "./modules/authentication.js";
 
 setupMobileNavigation();
 setupPortraits(config);
-setupGallery();
 setupAuthentication();
+setupGallery();
