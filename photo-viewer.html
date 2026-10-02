@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#272824">
+  <meta name="description" content="Photo viewer shell for Nixon III Photo Vault.">
+  <title>Photo Viewer | Nixon III Photo Vault</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/app-shell.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body class="viewer-page auth-pending" data-requires-admin>
+  <div class="auth-check" data-auth-check role="status"><span data-auth-check-message>Verifying administrator access…</span><a class="auth-check-link" href="login.html">Return to administrator sign in <span aria-hidden="true">→</span></a></div>
+  <header class="viewer-header">
+    <a class="viewer-back" href="gallery.html"><span aria-hidden="true">←</span> Back to gallery</a>
+    <a class="wordmark wordmark--light" href="dashboard.html" aria-label="Nixon III Photo Vault overview"><span class="wordmark-seal" aria-hidden="true">N</span><span class="wordmark-copy"><strong>Nixon III</strong><span>Photo Vault</span></span></a>
+    <div class="viewer-header__actions"><span class="viewer-header__status"><span class="viewer-avatar portrait-token" aria-hidden="true"><img class="portrait-image" data-portrait alt="" hidden><span class="portrait-token__fallback" data-portrait-placeholder>N</span></span> Private archive</span><button class="button button--outline auth-logout" type="button" data-auth-logout>Sign out</button><span class="auth-logout-message" data-auth-logout-message role="status" aria-live="polite"></span></div>
+  </header>
+  <main class="viewer-main">
+    <div class="viewer-stage">
+      <div class="viewer-placeholder portrait-frame" aria-label="Photo viewer portrait placeholder">
+        <img class="portrait-image" data-portrait alt="Portrait of Nixon III" hidden>
+        <div class="portrait-placeholder portrait-placeholder--dark" data-portrait-placeholder>
+          <span class="portrait-placeholder__mark" aria-hidden="true">N</span>
+          <span class="portrait-placeholder__name">Nixon III</span>
+          <span class="portrait-placeholder__note">A real photo will appear here after the archive is connected</span>
+        </div>
+      </div>
+      <button class="viewer-control viewer-control--previous" type="button" disabled aria-label="Previous photo">←</button>
+      <button class="viewer-control viewer-control--next" type="button" disabled aria-label="Next photo">→</button>
+    </div>
+    <div class="viewer-details">
+      <div><p class="eyebrow eyebrow--light">Photo details</p><h1>Photo viewer</h1><p>Photo information and navigation will be available when the private gallery is connected.</p></div>
+      <div class="viewer-actions"><button type="button" class="viewer-action" disabled aria-label="Add to favorites">♡ <span>Favorite</span></button><button type="button" class="viewer-action" disabled aria-label="More photo actions">··· <span>More</span></button></div>
+    </div>
+  </main>
+  <footer class="viewer-footer"><span>Nixon III Photo Vault</span><a href="vault-access.html">About private access <span aria-hidden="true">→</span></a></footer>
+</body>
+</html>

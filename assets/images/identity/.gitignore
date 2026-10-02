@@ -1,0 +1,4 @@
+# Keep privately uploaded identity photos out of Git.
+*
+!.gitignore
+!.gitkeep

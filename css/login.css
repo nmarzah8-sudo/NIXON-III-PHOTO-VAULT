@@ -1,0 +1,39 @@
+.login-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(340px, 0.72fr);
+  align-items: center;
+  gap: clamp(60px, 10vw, 150px);
+  width: min(1050px, calc(100% - 96px));
+  min-height: calc(100vh - 158px);
+  margin-inline: auto;
+  padding-block: 60px;
+}
+
+.login-identity { max-width: 470px; }
+.login-identity h1 { font-size: clamp(58px, 6.4vw, 78px); }
+.login-identity .welcome-intro { margin-block: 18px 22px; }
+.login-portrait { width: min(100%, 340px); min-height: 240px; aspect-ratio: 1.45; }
+.login-portrait .portrait-placeholder { gap: 7px; }
+.login-portrait .portrait-placeholder__mark { width: 48px; font-size: 24px; }
+.login-portrait .portrait-placeholder__name { font-size: 18px; }
+.login-portrait .portrait-placeholder__note { font-size: 9px; }
+.login-privacy { margin-top: 16px; }
+
+.login-form-panel {
+  width: 100%;
+  padding: 38px 0 34px 42px;
+  border-left: 1px solid var(--line);
+}
+.form-heading .eyebrow { margin-bottom: 14px; }
+.form-heading h2 { margin: 0; font-family: var(--serif); font-size: 35px; font-weight: 400; }
+.form-heading > p:last-child { margin: 10px 0 28px; color: var(--ink-soft); font-size: 12px; line-height: 1.7; }
+.login-form { display: grid; gap: 10px; }
+.login-form label { margin-top: 7px; font-size: 11px; font-weight: 600; }
+.login-form input { width: 100%; min-height: 48px; padding: 0 13px; border: 1px solid var(--line); border-radius: 0; background: var(--paper-light); color: var(--ink); font-size: 12px; }
+.login-form input::placeholder { color: #85877f; }
+.login-form input:disabled { opacity: 0.68; }
+.primary-button { width: 100%; margin-top: 12px; cursor: pointer; }
+.primary-button:disabled { border-color: #74766f; background: #74766f; cursor: not-allowed; }
+.setup-message { margin: 18px 0 0; padding-left: 13px; border-left: 2px solid var(--accent); color: var(--ink-soft); font-size: 10px; line-height: 1.7; }
+.setup-message[data-state="error"] { border-color: #9b5547; color: #78473e; }
+.form-back-link { display: inline-block; margin-top: 23px; color: var(--ink-soft); font-size: 10px; text-decoration-thickness: 1px; text-underline-offset: 3px; }

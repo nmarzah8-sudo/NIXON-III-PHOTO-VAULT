@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ee">
+  <meta name="description" content="Nixon III Photo Vault administrator dashboard preview.">
+  <title>Overview | Nixon III Photo Vault</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/app-shell.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body class="app-page auth-pending" data-requires-admin>
+  <div class="auth-check" data-auth-check role="status"><span data-auth-check-message>Verifying administrator access…</span><a class="auth-check-link" href="login.html">Return to administrator sign in <span aria-hidden="true">→</span></a></div>
+  <header class="app-header">
+    <button class="nav-toggle" type="button" data-nav-toggle aria-controls="app-navigation" aria-expanded="false" aria-label="Open navigation"><span></span><span></span></button>
+    <a class="wordmark" href="dashboard.html" aria-label="Nixon III Photo Vault overview">
+      <span class="wordmark-seal" aria-hidden="true">N</span>
+      <span class="wordmark-copy"><strong>Nixon III</strong><span>Photo Vault</span></span>
+    </a>
+    <div class="app-header__right">
+      <span class="connection-label"><span aria-hidden="true"></span> Private archive</span>
+      <button class="button button--outline auth-logout" type="button" data-auth-logout>Sign out</button>
+      <span class="auth-logout-message" data-auth-logout-message role="status" aria-live="polite"></span>
+    </div>
+  </header>
+  <div class="app-frame">
+    <nav class="app-navigation" id="app-navigation" data-app-navigation aria-label="Main navigation">
+      <p class="nav-label">Workspace</p>
+      <a class="nav-item is-current" href="dashboard.html" aria-current="page"><span class="nav-icon" aria-hidden="true">⌂</span> Overview</a>
+      <a class="nav-item" href="vault-access.html"><span class="nav-icon" aria-hidden="true">⌑</span> Vault access</a>
+      <a class="nav-item" href="gallery.html"><span class="nav-icon" aria-hidden="true">▦</span> Gallery</a>
+      <a class="nav-item" href="gallery.html#albums"><span class="nav-icon" aria-hidden="true">▤</span> Albums</a>
+      <a class="nav-item" href="gallery.html#favorites"><span class="nav-icon" aria-hidden="true">♡</span> Favorites</a>
+      <div class="nav-bottom">
+        <div class="nav-portrait">
+          <span class="portrait-token" aria-hidden="true"><img class="portrait-image" data-portrait alt="" hidden><span class="portrait-token__fallback" data-portrait-placeholder>N</span></span>
+          <div><strong>Nixon III</strong><span>Family archive</span></div>
+        </div>
+        <a class="nav-item nav-item--quiet" href="index.html"><span class="nav-icon" aria-hidden="true">↗</span> Public welcome page</a>
+      </div>
+    </nav>
+
+    <main class="app-main">
+      <div class="app-content dashboard-content">
+        <div class="page-heading">
+          <div><p class="eyebrow">Your private archive</p><h1>Good to have you here.</h1><p class="page-lede">A thoughtful space for the moments and milestones you want to keep close.</p></div>
+          <a class="button button--dark" href="gallery.html">Open gallery <span aria-hidden="true">→</span></a>
+        </div>
+
+        <section class="dashboard-hero" aria-label="Archive welcome">
+          <div class="dashboard-hero__copy">
+            <span class="eyebrow eyebrow--light">Nixon III Photo Vault</span>
+            <h2>A lifetime of little moments.</h2>
+            <p>Original photographs are kept in private storage while gallery browsing is prepared.</p>
+            <a class="text-link text-link--light" href="gallery.html">Explore the gallery <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="dashboard-hero__portrait portrait-frame">
+            <img class="portrait-image" data-portrait alt="Portrait of Nixon III" hidden>
+            <div class="portrait-placeholder portrait-placeholder--dark" data-portrait-placeholder>
+              <span class="portrait-placeholder__mark" aria-hidden="true">N</span>
+              <span class="portrait-placeholder__name">Nixon III</span>
+              <span class="portrait-placeholder__note">Portrait placeholder</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="photo-upload" data-photo-upload aria-labelledby="photo-upload-title">
+          <div class="photo-upload__heading">
+            <div><p class="eyebrow">Private originals</p><h2 id="photo-upload-title">Add photos to the archive</h2><p>Select image files from this device. Originals are uploaded unchanged to private Storage.</p></div>
+          </div>
+          <div class="photo-upload__fields">
+            <label class="photo-upload__album-label" for="photo-album">Album name <span>(optional)</span></label>
+            <input class="photo-upload__album" id="photo-album" type="text" maxlength="120" placeholder="Add an album label" data-photo-album>
+          </div>
+          <div class="photo-upload__actions">
+            <input class="visually-hidden" id="photo-files" type="file" accept="image/*" multiple data-photo-files>
+            <button class="button button--outline" type="button" data-photo-select>Select photos</button>
+            <button class="button button--dark" type="button" data-photo-upload-button disabled>Upload photos</button>
+            <button class="photo-upload__clear" type="button" data-photo-clear disabled>Clear selection</button>
+          </div>
+          <ul class="photo-upload__file-list" data-photo-file-list aria-label="Selected photo files"></ul>
+          <progress class="photo-upload__progress" data-photo-progress max="1" value="0" aria-label="Photo upload progress" hidden></progress>
+          <p class="photo-upload__progress-label" data-photo-progress-label></p>
+          <p class="photo-upload__message" data-photo-message role="status" aria-live="polite">Photos remain private. Uploads require an active administrator session.</p>
+        </section>
+
+        <section class="dashboard-links" aria-label="Archive sections">
+          <a class="section-card" href="gallery.html"><span class="section-card__icon" aria-hidden="true">▦</span><span class="section-card__meta">Your photographs</span><strong>Gallery</strong><span class="section-card__arrow" aria-hidden="true">↗</span></a>
+          <a class="section-card" href="gallery.html#albums"><span class="section-card__icon" aria-hidden="true">▤</span><span class="section-card__meta">Gathered by chapter</span><strong>Albums</strong><span class="section-card__arrow" aria-hidden="true">↗</span></a>
+          <a class="section-card" href="gallery.html#favorites"><span class="section-card__icon" aria-hidden="true">♡</span><span class="section-card__meta">The ones to revisit</span><strong>Favorites</strong><span class="section-card__arrow" aria-hidden="true">↗</span></a>
+        </section>
+
+        <section class="connection-notice" aria-labelledby="connection-title">
+          <span class="notice-lock" aria-hidden="true">⌑</span>
+          <div><h2 id="connection-title">Your archive is being prepared</h2><p>Administrator sign-in and private photo uploads are available. Gallery browsing and other archive actions are not connected yet.</p></div>
+          <a href="vault-access.html" class="text-link">About access <span aria-hidden="true">→</span></a>
+        </section>
+      </div>
+      <footer class="app-footer"><span>Nixon III Photo Vault</span><span>Private by design</span></footer>
+    </main>
+  </div>
+</body>
+</html>
