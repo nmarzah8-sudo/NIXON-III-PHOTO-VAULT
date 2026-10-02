@@ -91,10 +91,6 @@
   .access-copy .button { margin-top: 2px; }
   .access-card { max-width: 470px; }
   .access-support { padding-top: 16px; }
-  .gallery-tools { align-items: stretch; flex-wrap: wrap; }
-  .search-box { width: 100%; }
-  .filter-button { min-height: 42px; }
-  .search-note { align-self: center; max-width: 185px; line-height: 1.4; }
   .gallery-toolbar { margin-top: 17px; }
   .collection-tabs { width: 100%; justify-content: space-between; gap: 7px; }
   .collection-tab { min-height: 43px; font-size: 9px; }
@@ -153,5 +149,4 @@
   .empty-state { grid-template-columns: 88px minmax(0, 1fr); gap: 14px; }
   .empty-state__portrait { min-height: 125px; }
   .empty-state__copy h2 { font-size: 21px; }
-  .search-note { max-width: 150px; font-size: 8px; }
 }

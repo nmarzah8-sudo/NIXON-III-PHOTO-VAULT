@@ -25,7 +25,6 @@
       <a class="nav-item" href="vault-access.html"><span class="nav-icon" aria-hidden="true">⌑</span> Vault access</a>
       <a class="nav-item is-current" href="gallery.html" aria-current="page"><span class="nav-icon" aria-hidden="true">▦</span> Gallery</a>
       <a class="nav-item" href="#albums"><span class="nav-icon" aria-hidden="true">▤</span> Albums</a>
-      <a class="nav-item" href="#favorites"><span class="nav-icon" aria-hidden="true">♡</span> Favorites</a>
       <div class="nav-bottom"><div class="nav-portrait"><span class="portrait-token" aria-hidden="true"><img class="portrait-image" data-portrait alt="" hidden><span class="portrait-token__fallback" data-portrait-placeholder>N</span></span><div><strong>Nixon III</strong><span>Family archive</span></div></div><a class="nav-item nav-item--quiet" href="index.html"><span class="nav-icon" aria-hidden="true">↗</span> Public welcome page</a></div>
     </nav>
     <main class="app-main">
@@ -35,17 +34,10 @@
           <button class="button button--outline" type="button" disabled aria-disabled="true">＋ <span>Add photos · Coming later</span></button>
         </div>
 
-        <section class="gallery-tools" aria-label="Search and filter gallery">
-          <label class="search-box"><span aria-hidden="true">⌕</span><span class="visually-hidden">Search the gallery</span><input type="search" placeholder="Search memories" disabled aria-describedby="search-note"></label>
-          <button class="filter-button" type="button" disabled aria-disabled="true"><span aria-hidden="true">☷</span> Filters <span class="filter-count">0</span></button>
-          <span class="search-note" id="search-note">Search and filters will be enabled with the archive connection.</span>
-        </section>
-
         <div class="gallery-toolbar">
           <div class="collection-tabs" aria-label="Gallery collections">
             <a class="collection-tab is-selected" href="#all-photos" aria-current="location">All photos</a>
             <a class="collection-tab" href="#albums">Albums</a>
-            <a class="collection-tab" href="#favorites">Favorites</a>
           </div>
           <div class="preview-state-switch" aria-label="Gallery interface preview states">
             <span>Preview:</span>
@@ -83,10 +75,6 @@
         <section class="collection-section" id="albums" aria-labelledby="albums-title">
           <div class="section-heading"><div><p class="eyebrow">Collected by chapter</p><h2 id="albums-title">Albums</h2></div><span class="section-count">Archive section</span></div>
           <div class="collection-empty"><span aria-hidden="true">▤</span><div><strong>Albums will appear here</strong><p>This preview is not connected to your archive.</p></div></div>
-        </section>
-        <section class="collection-section collection-section--last" id="favorites" aria-labelledby="favorites-title">
-          <div class="section-heading"><div><p class="eyebrow">Worth revisiting</p><h2 id="favorites-title">Favorites</h2></div><span class="section-count">Archive section</span></div>
-          <div class="collection-empty"><span aria-hidden="true">♡</span><div><strong>Your favorite moments will live here</strong><p>Saved photographs will appear here when the archive is connected.</p></div></div>
         </section>
       </div>
       <footer class="app-footer"><span>Nixon III Photo Vault</span><span>Private by design</span></footer>
