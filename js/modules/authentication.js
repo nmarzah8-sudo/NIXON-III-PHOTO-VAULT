@@ -1,5 +1,6 @@
 import { getSupabaseClient } from "../supabase-client.js";
 import { setupDashboardPhotoUpload } from "./photo-upload.js";
+import { setupDashboardPhotoRecovery } from "./photo-recovery.js";
 
 const LOGIN_PATH = "login.html";
 const DASHBOARD_PATH = "dashboard.html";
@@ -39,6 +40,15 @@ async function getCurrentAuthorizedUser(client) {
     return null;
   }
 
+  return user;
+}
+
+async function getVerifiedAuthenticatedUser(client) {
+  const { data, error } = await client.auth.getUser();
+  if (error) throw error;
+
+  const user = data.user;
+  if (!user?.id || !(await verifyAdminUser(client, user.id))) return null;
   return user;
 }
 
@@ -158,6 +168,7 @@ async function protectPage() {
 
     setupLogout(client);
     setupDashboardPhotoUpload(client, () => getCurrentAuthorizedUser(client));
+    setupDashboardPhotoRecovery(client, () => getVerifiedAuthenticatedUser(client));
     allowProtectedPage();
   } catch {
     if (client) {
