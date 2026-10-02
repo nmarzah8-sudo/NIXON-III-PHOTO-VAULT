@@ -6,7 +6,7 @@
   .page-heading { align-items: start; }
   .access-layout { grid-template-columns: minmax(0, 1fr) minmax(250px, 0.8fr); gap: 30px; }
   .gallery-toolbar { align-items: start; flex-direction: column; gap: 3px; }
-  .preview-disclaimer { text-align: left; }
+  .photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .welcome-layout { gap: 55px; }
 }
 
@@ -94,10 +94,9 @@
   .gallery-toolbar { margin-top: 17px; }
   .collection-tabs { width: 100%; justify-content: space-between; gap: 7px; }
   .collection-tab { min-height: 43px; font-size: 9px; }
-  .preview-state-switch { width: 100%; flex-wrap: wrap; }
-  .preview-state-switch button { min-height: 34px; padding-inline: 10px; font-size: 9px; }
-  .preview-disclaimer { max-width: 290px; font-size: 8px; line-height: 1.5; }
   .gallery-state { min-height: 0; }
+  .photo-grid { grid-template-columns: 1fr; gap: 12px; margin-top: 18px; }
+  .photo-card__details { padding: 11px 12px; }
   .empty-state { grid-template-columns: 112px minmax(0, 1fr); gap: 18px; min-height: 270px; padding-block: 28px 34px; }
   .empty-state__portrait { min-height: 150px; aspect-ratio: 0.72; }
   .empty-state__portrait .portrait-placeholder { padding: 8px; }
