@@ -8,4 +8,4 @@ The dashboard upload area accepts image files and uploads their original browser
 
 If Storage upload succeeds but metadata creation fails, the dashboard reports that distinction and retains the operation's record ID and Storage path. Retrying saves metadata without uploading another copy. This phase does not implement gallery loading, deletion, sharing, downloads, or image derivatives.
 
-Do not add private original photos to Git or public deployments. The real identity photo in `assets/images/identity/` is local-only and ignored by Git.
+The approved interface portrait at `assets/images/identity/BackgroundEraser_20261001_212350469.png` is intentionally included for public website display. Do not add uploaded or other private original photos to Git or public deployments; they belong in the private Supabase Storage bucket.

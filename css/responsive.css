@@ -11,7 +11,100 @@
 }
 
 @media (max-width: 700px) {
-  .site-header,.site-footer { width: calc(100% - 40px); }
+  .site-header,.site-footer { width: calc(100% - 40px);   }
+
+  @media (max-width: 900px) {
+    .dashboard-hero__copy { width: 56%; }
+    .dashboard-hero__portrait .portrait-image,
+    .dashboard-hero__portrait::before,
+    .dashboard-hero__portrait .portrait-placeholder { width: min(42%, 360px); }
+  }
+
+  @media (max-width: 700px) {
+    html,
+    body { overflow-x: clip; }
+
+    .app-header { gap: 8px; }
+    .app-header .wordmark { min-width: 0; }
+    .app-header__right { flex: 0 0 auto; }
+    .auth-logout { min-height: 42px; }
+    .nav-toggle { flex: 0 0 44px; }
+
+    .app-content { min-width: 0; }
+    .page-heading .button,
+    .photo-upload__actions .button,
+    .photo-recovery__action,
+    .primary-link,
+    .primary-button { min-height: 46px; }
+
+    .dashboard-hero {
+      min-height: 420px;
+      align-items: start;
+    }
+
+    .dashboard-hero__copy {
+      width: 100%;
+      padding: 25px 21px;
+    }
+
+    .dashboard-hero h2 { max-width: 320px; font-size: 28px; }
+    .dashboard-hero__copy > p:not(.eyebrow) { max-width: 300px; font-size: 12px; }
+    .dashboard-hero__portrait::after {
+      background: linear-gradient(180deg, var(--color-background) 0%, rgb(11 11 15 / 96%) 38%, rgb(11 11 15 / 62%) 61%, rgb(11 11 15 / 4%) 100%);
+    }
+
+    .dashboard-hero__portrait::before {
+      top: auto;
+      right: auto;
+      bottom: 14px;
+      left: 50%;
+      width: min(70%, 320px);
+      height: 176px;
+      transform: translateX(-50%);
+    }
+
+    .dashboard-hero__portrait .portrait-image {
+      top: auto;
+      right: auto;
+      bottom: 15px;
+      left: 50%;
+      width: min(70%, 320px);
+      height: 174px;
+      transform: translateX(-50%);
+      object-fit: contain;
+    }
+
+    .dashboard-hero__portrait .portrait-placeholder {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      width: min(70%, 320px);
+      height: 176px;
+      margin: 0;
+      padding: 10px;
+      transform: translateX(-50%);
+    }
+
+    .photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  @media (max-width: 420px) {
+    .site-header,
+    .site-footer { width: calc(100% - 32px); }
+    .app-header { padding-inline: 12px; }
+    .app-header .wordmark { gap: 8px; margin-left: 2px; }
+    .app-header .wordmark-copy strong { font-size: 13px; }
+    .app-header .wordmark-copy span { font-size: 7px; letter-spacing: 1px; }
+    .app-header__right .auth-logout { min-height: 40px; padding-inline: 9px; font-size: 9px; }
+    .app-content { padding-inline: 16px; }
+    .app-footer { padding-inline: 16px; }
+    .photo-grid { grid-template-columns: 1fr; }
+    .photo-upload,
+    .photo-recovery { padding: 15px; }
+    .photo-upload__actions .button { flex-basis: 100%; }
+    .connection-notice > .text-link { margin-left: 0; }
+    .empty-state { grid-template-columns: 96px minmax(0, 1fr); gap: 13px; }
+  }
   .site-header { min-height: 72px; }
   .wordmark-seal { width: 34px; font-size: 19px; }
   .wordmark-copy strong { font-size: 16px; }
@@ -48,9 +141,9 @@
   .nav-toggle[aria-expanded="true"] span:first-child { transform: translateY(3px) rotate(45deg); }
   .nav-toggle[aria-expanded="true"] span:last-child { transform: translateY(-3px) rotate(-45deg); }
   .app-frame { display: block; min-height: calc(100vh - 66px); }
-  .app-navigation { position: fixed; z-index: 9; top: 66px; bottom: 0; left: 0; width: min(300px, 86vw); height: auto; min-height: 0; padding: 24px 16px 18px; transform: translateX(-105%); visibility: hidden; border-right: 1px solid var(--line); box-shadow: 12px 0 28px rgb(26 26 22 / 9%); transition: transform 180ms ease, visibility 180ms; }
+  .app-navigation { position: fixed; z-index: 9; top: 66px; bottom: 0; left: 0; width: min(300px, 86vw); height: auto; min-height: 0; padding: 24px 16px 18px; transform: translateX(-105%); visibility: hidden; border-right: 1px solid var(--line); box-shadow: 12px 0 28px rgb(0 0 0 / 9%); transition: transform 180ms ease, visibility 180ms; }
   .app-navigation.is-open { transform: translateX(0); visibility: visible; }
-  .navigation-open::after { position: fixed; z-index: 8; inset: 66px 0 0; background: rgb(25 26 23 / 30%); content: ""; }
+  .navigation-open::after { position: fixed; z-index: 8; inset: 66px 0 0; background: rgb(11 11 15 / 58%); content: ""; }
   .nav-item { min-height: 48px; font-size: 12px; }
   .app-content { padding: 31px 21px 48px; }
   .app-footer { min-height: 49px; padding-inline: 21px; font-size: 8px; }

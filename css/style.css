@@ -1,15 +1,23 @@
 :root {
-  color-scheme: light;
-  --ink: #272824;
-  --ink-strong: #1f201d;
-  --ink-soft: #66675f;
-  --paper: #f5f3ee;
-  --paper-light: #fcfbf8;
-  --paper-muted: #eae8e1;
-  --line: #dedcd3;
-  --accent: #a48653;
-  --accent-deep: #735a35;
-  --green: #68776a;
+  color-scheme: dark;
+  --color-background: #0B0B0F;
+  --color-surface: #17171D;
+  --color-primary: #B5122B;
+  --color-primary-dark: #6E1024;
+  --color-gold: #D4AF6A;
+  --color-text: #F4F1EA;
+  --color-text-muted: #A7A7AE;
+  --ink: var(--color-text);
+  --ink-strong: var(--color-text);
+  --ink-soft: var(--color-text-muted);
+  --paper: var(--color-background);
+  --paper-light: var(--color-surface);
+  --paper-muted: var(--color-background);
+  --line: var(--color-primary-dark);
+  --accent: var(--color-primary);
+  --accent-deep: var(--color-gold);
+  --accent-hover: var(--color-primary-dark);
+  --green: var(--color-gold);
   --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
   --sans: "Avenir Next", Avenir, "Segoe UI", sans-serif;
 }
@@ -46,6 +54,14 @@ input:focus-visible {
 
 button:disabled { cursor: not-allowed; }
 [hidden] { display: none !important; }
+
+::selection { background: rgb(181 18 43 / 35%); color: var(--ink); }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline-color: var(--accent);
+}
 
 .visually-hidden {
   position: absolute;
@@ -202,15 +218,15 @@ h1, h2, h3, p { overflow-wrap: break-word; }
   display: grid;
   place-items: center;
   overflow: hidden;
-  border: 1px solid #cfccc1;
-  background-color: #e9e7df;
+  border: 1px solid var(--color-primary-dark);
+  background-color: var(--color-surface);
 }
 
 .portrait-frame--welcome { min-height: 450px; aspect-ratio: 0.83; }
 .portrait-frame--welcome::before {
   position: absolute;
   inset: 12px;
-  border: 1px solid rgb(115 90 53 / 25%);
+  border: 1px solid rgb(212 175 106 / 25%);
   content: "";
   pointer-events: none;
 }
@@ -223,7 +239,7 @@ h1, h2, h3, p { overflow-wrap: break-word; }
   width: 68px;
   aspect-ratio: 1;
   place-items: center;
-  border: 1px solid rgb(115 90 53 / 45%);
+  border: 1px solid rgb(212 175 106 / 45%);
   border-radius: 50%;
   color: var(--accent-deep);
   font-family: var(--serif);
@@ -278,3 +294,87 @@ h1, h2, h3, p { overflow-wrap: break-word; }
     transition-duration: 0.01ms !important;
   }
 }
+
+.primary-link,
+.primary-button,
+.button {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--ink);
+}
+
+.primary-link:hover,
+.button--dark:hover,
+.primary-button:not(:disabled):hover {
+  border-color: var(--accent-hover);
+  background: var(--accent-hover);
+  color: var(--ink);
+}
+
+.button--outline {
+  border-color: var(--color-primary-dark);
+  background: transparent;
+  color: var(--ink);
+}
+
+.button--outline:hover:not(:disabled) {
+  border-color: var(--accent);
+  background: rgb(110 16 36 / 35%);
+  color: var(--ink);
+}
+
+.button--outline:disabled { color: var(--ink-soft); }
+
+.wordmark-seal {
+  color: var(--accent);
+  border-color: rgb(212 175 106 / 55%);
+}
+
+.wordmark-copy span { color: var(--ink-soft); }
+
+.status-mark { background: var(--accent); }
+
+.welcome-portrait .portrait-frame {
+  border-color: var(--color-primary-dark);
+  background-color: var(--color-surface);
+  box-shadow: 0 22px 60px rgb(0 0 0 / 38%);
+}
+
+.portrait-frame--welcome::before { border-color: rgb(212 175 106 / 35%); }
+
+.portrait-placeholder__mark {
+  border-color: rgb(212 175 106 / 48%);
+  color: var(--accent);
+}
+
+.frame-index,
+.portrait-note { color: var(--ink-soft); }
+
+.welcome-values article + article { border-left-color: var(--line); }
+.welcome-values h2 { color: var(--ink); }
+.value-index,
+.private-note span,
+.login-privacy span,
+.footer-lock span { color: var(--accent); }
+
+.text-link { color: var(--ink); }
+.text-link:hover,
+.header-link:hover,
+.form-back-link:hover { color: var(--accent-deep); }
+
+.site-footer,
+.site-header { border-color: var(--line); }
+
+.login-form input {
+  border-color: var(--color-primary-dark);
+  background: var(--color-surface);
+  color: var(--ink);
+}
+
+.login-form input::placeholder { color: var(--ink-soft); }
+.login-form input:focus-visible { border-color: var(--accent); }
+.login-form label { color: var(--ink); }
+.login-form-panel { border-color: var(--line); }
+.setup-message { color: var(--ink-soft); }
+.setup-message[data-state="error"] { color: var(--accent); }
+.primary-button:disabled { border-color: var(--color-primary-dark); background: var(--color-primary-dark); color: var(--ink); }

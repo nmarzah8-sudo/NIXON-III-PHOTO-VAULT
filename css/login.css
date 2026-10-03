@@ -30,10 +30,10 @@
 .login-form { display: grid; gap: 10px; }
 .login-form label { margin-top: 7px; font-size: 11px; font-weight: 600; }
 .login-form input { width: 100%; min-height: 48px; padding: 0 13px; border: 1px solid var(--line); border-radius: 0; background: var(--paper-light); color: var(--ink); font-size: 12px; }
-.login-form input::placeholder { color: #85877f; }
+.login-form input::placeholder { color: var(--ink-soft); }
 .login-form input:disabled { opacity: 0.68; }
 .primary-button { width: 100%; margin-top: 12px; cursor: pointer; }
-.primary-button:disabled { border-color: #74766f; background: #74766f; cursor: not-allowed; }
+.primary-button:disabled { border-color: var(--color-primary-dark); background: var(--color-primary-dark); color: var(--color-text); cursor: not-allowed; }
 .setup-message { margin: 18px 0 0; padding-left: 13px; border-left: 2px solid var(--accent); color: var(--ink-soft); font-size: 10px; line-height: 1.7; }
-.setup-message[data-state="error"] { border-color: #9b5547; color: #78473e; }
+.setup-message[data-state="error"] { border-color: var(--color-primary); color: var(--color-primary); }
 .form-back-link { display: inline-block; margin-top: 23px; color: var(--ink-soft); font-size: 10px; text-decoration-thickness: 1px; text-underline-offset: 3px; }
